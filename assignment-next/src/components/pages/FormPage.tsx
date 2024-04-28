@@ -48,7 +48,7 @@ const FormPage = () => {
     <div className=" flex pr-10 w-full justify-center">
       <div className="flex flex-row border rounded-3xl w-fit gap-10 pr-10 border-yellow-600 items-center">
         <div>
-          <Image height={565} src={image} alt="image" />
+          <Image height={565} className="hidden md:block" src={image} alt="image" />
         </div>
         <form
           onSubmit={(e) => sendDataHandler(e)}
