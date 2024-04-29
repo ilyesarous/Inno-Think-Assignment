@@ -19,12 +19,21 @@ const Footer = () => {
 
   return (
     <div className="flex flex-col justify-center items-center py-10 px-10 md:px-20">
-      <Image className="w-52" src={logo} alt="car show" />
+      <Image className="hidden md:block w-52" src={logo} alt="car show" />
       {/* <div className=""> */}
-      <div className="flex flex-col gap-5 w-full border-t-2 border-yellow-600">
-        <p className="text-lg font-semibold text-yellow-600">Reach us</p>
-        <div className="flex flex-row justify-between items-center gap-5">
-          <div className="flex flex-row gap-10">
+      <Image
+        className="block md:hidden w-full md:w-52"
+        src={map}
+        alt="car show"
+      />
+      <Image className="block md:hidden w-52" src={logo} alt="car show" />
+      <div className="flex flex-row gap-5 w-full border-t-2 justify-between items-center pt-10 mt-10 md:mt-0 border-yellow-600">
+        {/* <div className="flex flex-col md:flex-row  gap-5"> */}
+        <div className="flex flex-col gap-10">
+          <p className="text-lg font-semibold text-yellow-600">
+            Reach us
+          </p>
+          <div className="flex flex-col md:flex-row gap-10">
             <div>
               {contactInfo.map((info, i) => {
                 return (
@@ -46,8 +55,13 @@ const Footer = () => {
               })}
             </div>
           </div>
-          <Image className="w-52" src={map} alt="car show" />
         </div>
+        <Image
+          className="hidden md:block w-full md:w-52"
+          src={map}
+          alt="car show"
+        />
+        {/* </div> */}
         {/* </div> */}
       </div>
     </div>

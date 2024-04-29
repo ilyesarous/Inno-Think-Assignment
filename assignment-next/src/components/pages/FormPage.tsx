@@ -65,7 +65,7 @@ const FormPage = () => {
   };
 
   return (
-    <div className=" flex pr-10 w-screen md:w-full justify-center">
+    <div className=" flex md:pr-10 w-screen md:w-full justify-center">
       <div className="flex flex-row border rounded-3xl w-fit gap-10 pr-10 border-yellow-600 items-center">
         <div>
           <Image
@@ -77,9 +77,9 @@ const FormPage = () => {
         </div>
         <form
           onSubmit={(e) => sendDataHandler(e)}
-          className="py-5 flex flex-col gap-3"
+          className="py-5 flex flex-col gap-3 items-center md:items-stretch"
         >
-          <span className="flex flex-row justify-between gap-3">
+          <span className="flex flex-col md:flex-row justify-between gap-3">
             <div className="flex flex-col gap-2">
               <label>Nom</label>
               <input
@@ -114,7 +114,7 @@ const FormPage = () => {
               }}
             />
           </div>
-          <span className="flex flex-row gap-3">
+          <span className="flex flex-col md:flex-row gap-3">
             <div className="flex flex-col gap-2">
               <label>Type de Prestation</label>
               <span className="flex flex-row gap-1 justify-end rounded-2xl border border-yellow-600 bg-transparent py-2 w-60 px-2">
@@ -144,7 +144,7 @@ const FormPage = () => {
               </span>
             </div>
           </span>
-          <span className="flex flex-row justify-between gap-3">
+          <span className="flex flex-col md:flex-row justify-between gap-3">
             <div className="flex flex-col gap-2">
               <label>Adresse de prise en charge</label>
               <input
@@ -168,7 +168,7 @@ const FormPage = () => {
               />
             </div>
           </span>
-          <span className="flex flex-row justify-between gap-3">
+          <span className="flex flex-col md:flex-row md:justify-between gap-3">
             <div className="flex flex-col gap-2">
               <label>Date Prise en charge</label>
               <input
