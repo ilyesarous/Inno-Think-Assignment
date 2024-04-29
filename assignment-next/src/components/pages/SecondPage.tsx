@@ -24,7 +24,7 @@ const SecondPage = () => {
         return (
           <div
             key={item.id}
-            className={item.id === 2 ? "flex flex-col md:flex-row items-center gap-20 px-10 md:px-20" : "flex flex-col md:flex-row-reverse items-center gap-20 px-20"}
+            className={item.id === 2 ? "flex flex-col md:flex-row items-center gap-20 px-10 md:px-20" : "flex flex-col md:flex-row-reverse items-center gap-20 px-10 md:px-20"}
           >
               <Image
                 className="w-full h-full md:w-[50%]"

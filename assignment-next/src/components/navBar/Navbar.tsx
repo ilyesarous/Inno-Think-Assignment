@@ -3,21 +3,22 @@ import Image from "next/image";
 import fr from "@/assets/images/fr_flag.png";
 import eng from "@/assets/images/eng_flag.png";
 import Link from "next/link";
-import { IoIosArrowDown } from "react-icons/io";
 import { IoMenu } from "react-icons/io5";
 import { AiOutlineClose } from "react-icons/ai";
 import { useState } from "react";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
+import { IoIosArrowDown } from "react-icons/io";
 
 type NavItem = {
   id: number;
   label: string;
   link: string;
+  icon?: any;
 };
 
 const navItems: NavItem[] = [
   { id: 1, label: "Véhicules", link: "#" },
-  { id: 2, label: "Prestations", link: "#" },
+  { id: 2, label: "Prestations", link: "#", icon: <IoIosArrowDown/> },
   { id: 3, label: "Qui somme nous?", link: "#" },
 ];
 const Navbar = () => {
@@ -47,9 +48,10 @@ const Navbar = () => {
         onClick={toggleHandler}
       />
       {isOpen && (
-        <div 
+        <div
           ref={animation}
-          className="fixed left-0 top-0 flex h-full min-h-screen w-full justify-end bg-black/70 md:hidden">
+          className="fixed left-0 top-0 flex h-full min-h-screen w-full justify-end bg-black/70 md:hidden"
+        >
           <div className="h-full w-[65%] bg-black/50 px-4 py-4">
             <section className="flex justify-end">
               <AiOutlineClose
@@ -66,12 +68,11 @@ const Navbar = () => {
                     href={item.link}
                     className="group px-2 py-3 transition-all"
                   >
-                    <p className="flex gap-1 items-center text-white hover:cursor-pointer">
-                      <span>{item.label}</span>
-                      {item.label === "Prestations" && (
-                        <IoIosArrowDown />
-                      )}
+                    <p className="flex flex-row gap-1 items-center text-white hover:cursor-pointer">
+                      <span> {item.label} </span>
+                      <IoIosArrowDown/>
                     </p>
+                    
                   </Link>
                 );
               })}
@@ -95,9 +96,7 @@ const Navbar = () => {
             >
               <p className="flex gap-1 items-center text-white hover:cursor-pointer">
                 <span>{item.label}</span>
-                {item.label === "Presentation" && (
-                  <IoIosArrowDown className="rotate-180 transition-all group-hover:rotate-0" />
-                )}
+                {item.icon}
               </p>
             </Link>
           );

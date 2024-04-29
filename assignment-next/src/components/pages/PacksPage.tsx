@@ -94,7 +94,7 @@ const PacksPage = () => {
         illimité et des équipements spécifiques, offrant une réservation
         simplifiée et personnalisable pour les clients.
       </p>
-      <div className=" flex flex-row gap-5">
+      <div className=" flex flex-col md:flex-row gap-5">
         {packs.map((pack, i) => {
           return (
             <div key={i} className={"flex flex-col justify-center w-64 border border-yellow-600 rounded-lg"}>

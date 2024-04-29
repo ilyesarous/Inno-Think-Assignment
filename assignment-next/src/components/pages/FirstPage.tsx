@@ -3,11 +3,13 @@ import fImg from "@/assets/images/firstPageImg.png";
 const FirstPage = () => {
   return (
     <div className="h-screen flex flex-col gap-20">
+      <div className="relative">
         <Image
-          className="w-full h-full object-cover md:px-20 md:h-auto"
+          className="md:w-full h-full object-cover md:px-20 md:h-auto"
           src={fImg}
           alt="first pic"
         />
+      </div>
       <div className="flex flex-col px-10 md:px-20 gap-14 justify-center items-center">
         <p className="text-center px-15 font-medium">
           Basée en région Île-de-France, Emeraude Location se distingue par son
