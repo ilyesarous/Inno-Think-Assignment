@@ -18,7 +18,7 @@ type NavItem = {
 
 const navItems: NavItem[] = [
   { id: 1, label: "Véhicules", link: "#" },
-  { id: 2, label: "Prestations", link: "#", icon: <IoIosArrowDown/> },
+  { id: 2, label: "Prestations", link: "#", icon: <IoIosArrowDown /> },
   { id: 3, label: "Qui somme nous?", link: "#" },
 ];
 const Navbar = () => {
@@ -70,9 +70,8 @@ const Navbar = () => {
                   >
                     <p className="flex flex-row gap-1 items-center text-white hover:cursor-pointer">
                       <span> {item.label} </span>
-                      <IoIosArrowDown/>
+                      {item.icon}
                     </p>
-                    
                   </Link>
                 );
               })}

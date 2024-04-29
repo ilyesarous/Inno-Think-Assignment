@@ -4,7 +4,7 @@ const FirstPage = () => {
   return (
     <div className="flex flex-col gap-20">
         <Image
-          className="w-fit h-full object-cover md:px-20 md:h-auto"
+          className="w-full h-full object-cover md:px-20 md:h-auto"
           src={fImg}
           alt="first pic"
         />

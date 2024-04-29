@@ -38,7 +38,7 @@ const ThirdPage = () => {
           Nos modèles de voitures en location avec chauffeur
         </p>
 
-        <div>
+        <div className="flex flex-col gap-5">
           <div className="flex flex-col md:flex-row justify-center gap-10 px-10 md:px-20">
             {listItems.map((item, i) => {
               return (
